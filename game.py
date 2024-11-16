@@ -7,6 +7,8 @@ pygame.mixer.init()
 
 # Screen dimensions and colors
 WIDTH, HEIGHT = 800, 600
+WHITE = (255, 255, 255)
+BLACK = (0, 0, 0)
 
 # sound effect
 pygame.mixer.music.load('pokemon_route.mp3')
