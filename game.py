@@ -321,10 +321,6 @@ class Game:
 
             # only the cage above human can effect human
             if block.block_type == "human" and block_rect.colliderect(human_rect):
-                block.pos[1] = self.terrain.rect.top - cage_height
-                block.pos[0] = self.human_left.pos[0] 
-                block.velocity = 0
-                block.static = True
                 self.human_left.sad()
                 self.game_over = True
 
