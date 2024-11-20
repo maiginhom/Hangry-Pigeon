@@ -92,8 +92,8 @@ class StartMenu:
 
     def run(self):
         while self.running:
-            self.handle_events()
             self.draw_menu()
+            self.handle_events()
             self.clock.tick(60)
 
 # Global settings
@@ -408,6 +408,7 @@ class Game:
     def run(self):
         while self.running:
             self.handle_events()
+            self.draw_game()
             # human move if the first pin click
             if self.first_pin_clicked and self.human_left.pos[0] < self.pigeon_right.pos[0]-75:
                 self.pigeon_right.notice()
@@ -426,7 +427,6 @@ class Game:
                     self.human_left.happy()
 
             self.check_collisions()  # Check for collisions (block falling on human, pigeon reaching food, human walking into pigeon)
-            self.draw_game()
             self.clock.tick(30)
 
 # Main program
